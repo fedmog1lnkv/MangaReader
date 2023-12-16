@@ -7,6 +7,10 @@ android {
     namespace = "com.fedmog1lnkv.mangareader"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.fedmog1lnkv.mangareader"
         minSdk = 24
