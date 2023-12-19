@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fedmog1lnkv.mangareader.databinding.FragmentHomeBinding
+import com.fedmog1lnkv.mangareader.presentation.common.decoration.VerticalSpacingItemDecoration
 import com.fedmog1lnkv.mangareader.presentation.common.list.MangasAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -36,6 +37,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.mangasRecycler.layoutManager = LinearLayoutManager(context)
         binding.mangasRecycler.adapter = adapter
+        binding.mangasRecycler.addItemDecoration(VerticalSpacingItemDecoration())
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED, ) {
                 viewModel.mangasFlow.collect {
