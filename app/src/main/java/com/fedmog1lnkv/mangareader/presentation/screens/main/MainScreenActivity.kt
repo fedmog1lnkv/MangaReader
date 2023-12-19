@@ -2,8 +2,8 @@ package com.fedmog1lnkv.mangareader.presentation.screens.main
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.window.OnBackInvokedDispatcher
+import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.fedmog1lnkv.mangareader.R
@@ -11,8 +11,9 @@ import com.fedmog1lnkv.mangareader.databinding.ActivityMainScreenBinding
 import com.fedmog1lnkv.mangareader.presentation.screens.account.AccountFragment
 import com.fedmog1lnkv.mangareader.presentation.screens.bookmarks.BookmarksFragment
 import com.fedmog1lnkv.mangareader.presentation.screens.home.HomeFragment
-import androidx.activity.addCallback
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainScreenActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainScreenBinding? = null
@@ -65,7 +66,6 @@ class MainScreenActivity : AppCompatActivity() {
             supportFragmentManager.addOnBackStackChangedListener {
                 val entry =
                     supportFragmentManager.getBackStackEntryAt(supportFragmentManager.backStackEntryCount - 1)
-                Log.d("PIZDA", entry.name.toString())
                 val buttonId = when (entry.name) {
                     HomeFragment::class.simpleName ->
                         R.id.home_navigation_button
