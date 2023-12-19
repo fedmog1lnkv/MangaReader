@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MangaReader</string>
+    <plurals name="chapters_plural">
+        <item quantity="one"> chapter</item>
+        <item quantity="other"> chapters</item>
+    </plurals>
 </resources>

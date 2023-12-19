@@ -1,10 +1,38 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.MangaReader" parent="Theme.Material3.DynamicColors.DayNight">
         <!-- Customize your light theme here. -->'
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="App.ImageView.Corner" parent="">
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeBottomLeft">28dp</item>
+        <item name="cornerSizeBottomRight">28dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="App.TextAppearance.MangaTitle" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+
+    <style name="App.TextAppearance.MangaChapters" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="App.TextAppearance.MangaRating" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="App.TextAppearance.MangaDescription" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/lightgray</item>
     </style>
 
     <style name="Theme.MangaReader" parent="Base.Theme.MangaReader" />
