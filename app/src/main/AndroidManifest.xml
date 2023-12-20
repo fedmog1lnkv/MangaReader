@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".presentation.screens.main.MainScreenActivity" />
+        <activity android:name=".presentation.screens.manga_details.MangaDetailsActivity" />
     </application>
 
 </manifest>
