@@ -7,12 +7,16 @@ object UserMapper {
     fun toDto(user: User) = UserDTO(
         image = user.image,
         name = user.name,
-        statistics = UserStatisticsMapper.toDto(user.statistics)
+        statistics = user.statistics.map {
+            UserStatisticItemMapper.toDto(it)
+        }
     )
 
     fun fromDto(dto: UserDTO) = User(
         image = dto.image,
         name = dto.name,
-        statistics = UserStatisticsMapper.fromDto(dto.statistics)
+        statistics = dto.statistics.map {
+            UserStatisticItemMapper.fromDto(it)
+        }
     )
 }

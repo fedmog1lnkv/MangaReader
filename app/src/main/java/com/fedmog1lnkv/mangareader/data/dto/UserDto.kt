@@ -6,5 +6,5 @@ import kotlinx.serialization.Serializable
 data class UserDTO(
     val image: String,
     val name: String,
-    val statistics: UserStatisticsDTO
+    val statistics: List<UserStatisticItemDto>
 )
