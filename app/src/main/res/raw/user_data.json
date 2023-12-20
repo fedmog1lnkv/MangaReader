@@ -1,0 +1,32 @@
+{
+  "image": "https://i.pinimg.com/originals/35/8b/96/358b9604fbbeb70ad02a2809b92ab3d8.png",
+  "name": "EvilArthas",
+  "statistics": [
+    {
+      "name": "Reading",
+      "display_color": "#6CB56C",
+      "count_mangas": "4"
+    },
+    {
+      "name": "In Plans",
+      "display_color": "#B962BC",
+      "count_mangas": "1"
+    },
+    {
+      "name": "Done",
+      "display_color": "#5D6CB9",
+      "count_mangas": "1"
+    },
+    {
+      "name": "Deferred",
+      "display_color": "#FDC931",
+      "count_mangas": "0"
+    },
+    {
+      "name": "Abandoned",
+      "display_color": "#F05256",
+      "count_mangas": "0"
+    }
+
+  ]
+}

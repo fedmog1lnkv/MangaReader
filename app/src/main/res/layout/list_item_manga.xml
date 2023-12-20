@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/manga_background_ripple"
+    android:clickable="true"
+    android:focusable="true">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image"
@@ -11,8 +14,8 @@
         android:layout_height="160dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/star"
-        app:shapeAppearanceOverlay="@style/App.ImageView.Corner" />
+        app:shapeAppearanceOverlay="@style/App.ImageView.Corner"
+        tools:src="@drawable/star" />
 
     <TextView
         android:id="@+id/title"
@@ -83,12 +86,12 @@
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/image"
         app:layout_constraintTop_toBottomOf="@id/info_container"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:ellipsize="end"
-        android:maxLines="3"
         tools:text="Гатс, известный как Черный Мечник, ищет убежища от демонов, охотящихся за ним, и отмщения человеку..." />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
