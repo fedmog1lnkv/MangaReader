@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#878787</color>
     <color name="lightgray">#B1B1B1</color>
+    <color name="searchbar">@color/material_dynamic_primary95</color>
 </resources>

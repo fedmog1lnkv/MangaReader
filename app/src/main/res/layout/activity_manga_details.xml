@@ -40,55 +40,67 @@
 
         <TextView
             android:id="@+id/title"
-            style="@style/App.TextAppearance.MangaTitle"
+            style="@style/App.TextAppearance.MangaDetails.MangaTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@id/image"
             tools:text="Berserk" />
 
-
-        <TextView
-            android:id="@+id/countChapters"
-            style="@style/App.TextAppearance.MangaChapters"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            tools:text="374 chapter" />
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/title">
 
-        <ImageView
-            android:id="@+id/dot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="14dp"
-            android:src="@drawable/dot"
-            app:layout_constraintStart_toEndOf="@id/countChapters"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            <TextView
+                android:id="@+id/countChapters"
+                style="@style/App.TextAppearance.MangaChapters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                tools:text="374 chapter" />
 
-        <TextView
-            android:id="@+id/rating"
-            style="@style/App.TextAppearance.MangaRating"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/rating"
+                style="@style/App.TextAppearance.MangaRating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                tools:text="9.75" />
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressRaiting"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            tools:text="9.75" />
+            android:layout_marginTop="2dp"
+            android:max="1000"
+            android:progress="750"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/info" />
 
 
         <TextView
             android:id="@+id/description"
-            style="@style/App.TextAppearance.MangaDescription"
+            style="@style/App.TextAppearance.MangaDetails.MangaDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/progressRaiting"
             tools:text="Гатс, известный как Черный Мечник, ищет убежища от демонов, охотящихся за ним, и отмщения человеку..." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

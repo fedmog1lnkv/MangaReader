@@ -46,6 +46,7 @@ class MangaDetailsActivity : AppCompatActivity() {
                     )
                 }"
                 binding.rating.text = manga.stars.toString()
+                binding.progressRaiting.progress = (manga.stars * 100).toInt()
                 binding.description.text = manga.description
             }
         }
