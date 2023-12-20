@@ -4,6 +4,7 @@ import com.fedmog1lnkv.mangareader.domain.model.Bookmark
 import com.fedmog1lnkv.mangareader.domain.model.Manga
 
 interface MangaRepository {
-    fun getMangas(): List<Manga>
-    fun getBookmark(): Bookmark
+    suspend fun getMangas(): List<Manga>
+    suspend fun getBookmarks(): List<Bookmark>
+    suspend fun getManga(id: String): Manga
 }

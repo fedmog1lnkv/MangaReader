@@ -1,5 +1,6 @@
 package com.fedmog1lnkv.mangareader.presentation.common.list
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,12 +8,13 @@ import com.bumptech.glide.Glide
 import com.fedmog1lnkv.mangareader.databinding.ListItemMangaBinding
 import com.fedmog1lnkv.mangareader.domain.model.Manga
 
-class MangasAdapter : RecyclerView.Adapter<MangasAdapter.MangasViewHolder>() {
+class MangasAdapter(
+    private val onClick: (Manga) -> Unit
+) : RecyclerView.Adapter<MangasAdapter.MangasViewHolder>() {
 
     private val mangas = mutableListOf<Manga>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MangasViewHolder {
-        val binding =
-            ListItemMangaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ListItemMangaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MangasViewHolder(binding)
     }
 
@@ -31,17 +33,21 @@ class MangasAdapter : RecyclerView.Adapter<MangasAdapter.MangasViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class MangasViewHolder(private val binding: ListItemMangaBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class MangasViewHolder(private val binding: ListItemMangaBinding) : RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("SetTextI18n")
         fun bind(item: Manga) {
             Glide.with(binding.root).load(item.image).into(binding.image)
             binding.title.text = item.title
-            binding.countChapters.text =
-                item.countChapters.toString() + binding.root.context.resources.getQuantityString(
+            binding.countChapters.text = "${item.countChapters} ${
+                binding.root.context.resources.getQuantityString(
                     com.fedmog1lnkv.mangareader.R.plurals.chapters_plural, item.countChapters
                 )
+            }"
             binding.rating.text = item.stars.toString()
             binding.description.text = item.description
+            binding.root.setOnClickListener {
+                onClick(item)
+            }
         }
     }
 

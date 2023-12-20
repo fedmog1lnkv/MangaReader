@@ -1,5 +1,6 @@
 package com.fedmog1lnkv.mangareader.di
 
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,4 +16,8 @@ class ApplicationModule {
     @Singleton
     @Provides
     fun provideCoroutineScope() = CoroutineScope(Dispatchers.IO + SupervisorJob())
+
+    @Singleton
+    @Provides
+    fun provideGson() = Gson()
 }
