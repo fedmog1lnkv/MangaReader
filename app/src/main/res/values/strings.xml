@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">MangaReader</string>
+    <string name="search_hint">Search</string>
+    <string name="login_hint">Login</string>
+    <string name="password_text">Password</string>
+    <string name="sign_in_text">Sign in</string>
+    <string name="forgot_the_password_text">Forgot the password?</string>
+    <string name="sign_up_text">Sign up</string>
+    <string name="account_text">Account</string>
+    <string name="statistics_text">Statistics</string>
     <plurals name="chapters_plural">
         <item quantity="one"> chapter</item>
         <item quantity="other"> chapters</item>

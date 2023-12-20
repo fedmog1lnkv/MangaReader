@@ -28,7 +28,7 @@
         android:autofillHints="name"
         android:background="@drawable/search_bar_background"
         android:drawableEnd="@drawable/search_outlined_24"
-        android:hint="Search"
+        android:hint="@string/search_hint"
         android:imeOptions="actionNext"
         android:inputType="text"
         android:paddingHorizontal="16dp"
