@@ -10,22 +10,22 @@
     {
       "name": "In Plans",
       "display_color": "#B962BC",
-      "count_mangas": "1"
+      "count_mangas": "5"
     },
     {
       "name": "Done",
       "display_color": "#5D6CB9",
-      "count_mangas": "1"
+      "count_mangas": "3"
     },
     {
       "name": "Deferred",
       "display_color": "#FDC931",
-      "count_mangas": "0"
+      "count_mangas": "4"
     },
     {
       "name": "Abandoned",
       "display_color": "#F05256",
-      "count_mangas": "0"
+      "count_mangas": "2"
     }
 
   ]
