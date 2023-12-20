@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.02"
+        app:layout_constraintGuide_begin="16dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -18,13 +18,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.98" />
+        app:layout_constraintGuide_end="16dp" />
 
     <EditText
         android:id="@+id/textInputSearchBar"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
+        android:autofillHints="name"
         android:background="@drawable/search_bar_background"
         android:drawableEnd="@drawable/search_outlined_24"
         android:hint="Search"
@@ -34,8 +35,7 @@
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"

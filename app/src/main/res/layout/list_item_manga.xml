@@ -12,9 +12,10 @@
         android:id="@+id/image"
         android:layout_width="120dp"
         android:layout_height="160dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/App.ImageView.Corner"
+        app:shapeAppearance="@style/App.ShapeAppearance.Manga.Image"
         tools:src="@drawable/star" />
 
     <TextView

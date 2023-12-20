@@ -4,9 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.fedmog1lnkv.mangareader.databinding.ActivityMangaDetailsBinding
 import com.fedmog1lnkv.mangareader.util.observeFlow
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,6 +38,7 @@ class MangaDetailsActivity : AppCompatActivity() {
 
         observeFlow(viewModel.manga) {
             it?.let { manga ->
+                Glide.with(binding.image).load(manga.image).into(binding.image)
                 binding.title.text = manga.title
                 binding.countChapters.text = "${manga.countChapters} ${
                     binding.root.context.resources.getQuantityString(
